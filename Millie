@@ -1,0 +1,29 @@
+echo "# Book-List-Database" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/MillieBell/Book-List-Database.git
+git push -u origin main
+
+/**Favorite Books:
+The Bluest Eye (1)
+To Kill a Mockingbird (5)
+Eric Jerome Dickey (2)
+Murder Mystery (4)
+Rich Dad Poor Dad (3)
+**/
+
+CREATE TABLE FavoriteBooks (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER);
+
+INSERT INTO FavoriteBooks VALUES (1992, "The Bluest Eye", 1);
+INSERT INTO FavoriteBooks VALUES (1993, "Eric Jerome Dickey", 2);
+INSERT INTO FavoriteBooks VALUES (1994, "Rich Dad Poor Dad", 3);
+INSERT INTO FavoriteBooks VALUES (1995, "Murder Mystery", 4);
+INSERT INTO FavoriteBooks VALUES (1996, "To Kill a Mockingbird", 5);
+
+SELECT * FROM FavoriteBooks;
+
+SELECT SUM(name) FROM FavoriteBooks;
+
+SELECT * FROM FavoriteBooks WHERE id > 1992;
